@@ -1,0 +1,23 @@
+server:
+  error:
+    include-stacktrace: never
+
+spring:
+  datasource:
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+    url: ${JDBS_DATABASE_URL}
+
+    show-sql: false
+
+    jpa:
+      hibernate:
+        ddl-auto: none
+
+logging:
+  level:
+    ROOT: INFO
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

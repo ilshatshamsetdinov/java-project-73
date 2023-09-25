@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:5001}
+
+base-url: /api
+
+rollbar_token: ${ROLLBAR_TOKEN:57e709e076a343619b4c631ddbc47ae5}
+
+spring:
+  application:
+    name: taskManager
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog-master.xml
+
+  profiles:
+    active: ${APP_ENV:dev}
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
+springdoc:
+  api-docs:
+    path: /swagger.html
